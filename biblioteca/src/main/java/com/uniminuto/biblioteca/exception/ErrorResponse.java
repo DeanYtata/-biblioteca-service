@@ -1,0 +1,20 @@
+package com.uniminuto.biblioteca.exception;
+
+public class ErrorResponse {
+
+    private String message;
+    private String detail;
+
+    public ErrorResponse(String message, String detail) {
+        this.message = message;
+        this.detail = detail;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+}
