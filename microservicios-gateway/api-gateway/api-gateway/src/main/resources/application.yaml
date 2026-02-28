@@ -1,0 +1,21 @@
+server:
+  port: 9000
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: auth-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/auth/**
+
+        - id: catalog-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/catalog/**
+
+        - id: orders-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/orders/**
